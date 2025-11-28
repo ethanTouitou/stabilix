@@ -1,0 +1,416 @@
+---
+// src/pages/index.astro
+import LandingLayout from "../layout/Layout.astro";
+import heroBg from "../assets/container.webp";
+import rs4ProImg from "../assets/imagewithfallback.webp";
+import Img from "../assets/img.webp";
+---
+
+<LandingLayout>
+  <section id="produits" class="py-24 bg-white text-slate-900">
+    <div class="max-w-6xl mx-auto px-6 text-center mb-20">
+      <h2
+        class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-800"
+      >
+        Notre gamme Stabilix
+      </h2>
+      <p class="mt-4 text-slate-600 max-w-xl mx-auto">
+        Technologie de pointe, résultats cinématographiques. Découvrez les
+        modèles qui transformeront vos vidéos.
+      </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6">
+      <div
+        class="bg-white border border-slate-200 shadow-sm rounded-2xl p-10 flex flex-col lg:flex-row gap-10 items-center"
+      >
+        <!-- IMAGE -->
+        <div class="w-full lg:w-1/2 flex justify-center">
+          <img
+            src={heroBg.src}
+            alt="Stabilisateur Stabilix RS3"
+            class="max-h-80 object-contain"
+          />
+        </div>
+
+        <!-- CONTENT -->
+        <div class="w-full lg:w-1/2 text-left">
+          <p class="text-sm font-medium text-indigo-600 mb-1">Stabilix RS3</p>
+
+          <h3 class="text-xl font-semibold text-slate-900 mb-4">
+            Le classique polyvalent
+          </h3>
+
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Conçu pour les professionnels qui recherchent un équilibre parfait
+            entre performance et légèreté.
+          </p>
+
+          <!-- ICON LIST -->
+          <ul class="space-y-3 text-sm text-slate-700 mb-6">
+            <li class="flex items-center gap-3">
+              <span class="text-lg">👜</span>
+              795g – Léger et maniable
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-lg">⏱</span>
+              12h d’autonomie continue
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-lg">⚡</span>
+              5 modes de prise de vue
+            </li>
+          </ul>
+
+          <!-- BADGE UTILISATION -->
+          <div class="bg-slate-100 rounded-xl p-4 mb-8">
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Idéal pour : <span class="font-medium text-indigo-700">
+                Production professionnelle, événementiel, documentaires
+              </span>
+            </p>
+          </div>
+
+          <!-- CTA -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 items-center sm:items-start"
+          >
+            <a
+              href="#commander"
+              class="rounded-full bg-indigo-700 text-white text-sm font-medium px-7 py-3 hover:bg-indigo-800 transition-colors"
+            >
+              Acheter maintenant
+            </a>
+            <a
+              href="#details"
+              class="rounded-full border border-slate-300 text-slate-700 text-sm font-medium px-7 py-3 hover:bg-slate-100 transition-colors"
+            >
+              En savoir plus
+            </a>
+
+            <!-- Price -->
+            <div
+              class="text-sm font-semibold text-slate-700 bg-white px-4 py-2 rounded-full shadow-md shadow-slate-200 ml-auto"
+            >
+              299€
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-white text-slate-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <div
+        class="relative bg-white border-2 border-indigo-600 rounded-3xl overflow-hidden flex flex-col lg:flex-row"
+      >
+        <!-- Colonne texte -->
+        <div
+          class="w-full lg:w-[45%] px-10 py-10 lg:py-12 flex flex-col justify-between"
+        >
+          <div>
+            <p class="text-sm font-medium text-indigo-700 mb-2">
+              Stabilix RS4 Pro
+            </p>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-slate-900 mb-4">
+              La référence des professionnels
+            </h3>
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              Le modèle le plus avancé de la gamme avec résistance à l’eau et
+              charge utile maximale pour les configurations lourdes.
+            </p>
+
+            <!-- Liste des avantages -->
+            <ul class="space-y-3 text-sm text-slate-800 mb-6">
+              <li class="flex items-center gap-3">
+                <span class="text-lg">🛡️</span>
+                Résistant à l’eau (IP54)
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-lg">📹</span>
+                15h d’autonomie record
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-lg">🎬</span>
+                8 modes créatifs avancés
+              </li>
+            </ul>
+
+            <!-- Bloc "Idéal pour" -->
+            <div
+              class="bg-indigo-50 text-xs text-slate-800 rounded-xl p-4 mb-8"
+            >
+              Idéal pour :
+              <span class="font-medium">
+                Cinéma, productions exigeantes, conditions difficiles
+              </span>
+            </div>
+          </div>
+
+          <!-- Boutons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#commander"
+              class="inline-flex justify-center rounded-full bg-indigo-700 text-white text-sm font-medium px-7 py-3 hover:bg-indigo-800 transition-colors"
+            >
+              Acheter maintenant
+            </a>
+            <a
+              href="#details-rs4"
+              class="inline-flex justify-center rounded-full border border-slate-300 text-slate-800 text-sm font-medium px-7 py-3 hover:bg-slate-100 transition-colors"
+            >
+              En savoir plus
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne image -->
+        <div class="relative w-full lg:w-[55%]">
+          <img
+            src={rs4ProImg.src}
+            alt="Stabilix RS4 Pro en situation professionnelle"
+            class="w-full h-full object-cover"
+          />
+
+          <!-- Badge "Recommandé par les pros" -->
+          <div class="absolute top-6 right-6">
+            <span
+              class="inline-flex items-center rounded-full bg-indigo-700 text-white text-xs font-medium px-6 py-2 shadow-md"
+            >
+              Recommandé par les pros
+            </span>
+          </div>
+
+          <!-- Price badge -->
+          <div class="absolute bottom-6 left-6">
+            <span
+              class="inline-flex items-center rounded-full bg-white text-slate-900 text-sm font-semibold px-5 py-2 shadow-lg shadow-slate-400/40"
+            >
+              499€
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white text-slate-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <div
+        class="bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col lg:flex-row"
+      >
+        <!-- IMAGE -->
+        <div class="relative w-full lg:w-[50%]">
+          <img
+            src={Img.src}
+            alt="Stabilix RS4 Mini en situation de tournage"
+            class="w-full h-full object-cover"
+          />
+
+          <!-- Prix -->
+          <div class="absolute bottom-6 left-6">
+            <span
+              class="inline-flex items-center rounded-full bg-white text-slate-900 text-sm font-semibold px-5 py-2 shadow-lg shadow-slate-400/40"
+            >
+              199€
+            </span>
+          </div>
+        </div>
+
+        <!-- CONTENU -->
+        <div
+          class="w-full lg:w-[50%] px-10 py-10 lg:py-12 flex flex-col justify-between"
+        >
+          <div>
+            <p class="text-sm font-medium text-indigo-700 mb-2">
+              Stabilix RS4 Mini
+            </p>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-slate-900 mb-4">
+              Compact et accessible
+            </h3>
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              Parfait pour les créateurs de contenu et vloggers qui privilégient
+              la mobilité sans compromis sur la qualité.
+            </p>
+
+            <!-- Liste des avantages -->
+            <ul class="space-y-3 text-sm text-slate-800 mb-6">
+              <li class="flex items-center gap-3">
+                <span class="text-lg">🎒</span>
+                485g – Ultra compact
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-lg">👤</span>
+                Interface simplifiée
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-lg">🕒</span>
+                10h pour vos journées
+              </li>
+            </ul>
+
+            <!-- Bloc "Idéal pour" -->
+            <div
+              class="bg-indigo-50 text-xs text-slate-800 rounded-xl p-4 mb-8"
+            >
+              Idéal pour :
+              <span class="font-medium">
+                Vlogging, voyage, réseaux sociaux, créateurs solo
+              </span>
+            </div>
+          </div>
+
+          <!-- Boutons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#commander"
+              class="inline-flex justify-center rounded-full bg-indigo-700 text-white text-sm font-medium px-7 py-3 hover:bg-indigo-800 transition-colors"
+            >
+              Acheter maintenant
+            </a>
+            <a
+              href="#details-rs4-mini"
+              class="inline-flex justify-center rounded-full border border-slate-300 text-slate-800 text-sm font-medium px-7 py-3 hover:bg-slate-100 transition-colors"
+            >
+              En savoir plus
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="avis" class="py-16 bg-[#1f3b92] text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Titre + intro -->
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-semibold">
+          Ce que disent nos utilisateurs
+        </h2>
+        <p class="mt-4 text-sm md:text-base text-white/80 max-w-2xl mx-auto">
+          Rejoignez des milliers de créateurs et professionnels qui nous font
+          confiance.
+        </p>
+      </div>
+
+      <!-- Cartes avis -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <!-- Avis 1 -->
+        <article
+          class="bg-white/5 border border-white/10 rounded-3xl px-6 py-7 flex flex-col justify-between"
+        >
+          <div class="mb-6">
+            <!-- Étoiles -->
+            <div class="flex items-center gap-1 text-yellow-300 text-sm mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span
+                >★</span
+              >
+            </div>
+
+            <p class="text-sm leading-relaxed text-white/90 italic">
+              "Le RS4 Pro a transformé ma façon de travailler. La stabilité est
+              impressionnante même en conditions difficiles, et l'autonomie me
+              permet de filmer toute une journée sans interruption."
+            </p>
+          </div>
+
+          <!-- Profil -->
+          <div class="flex items-center gap-4">
+            <div
+              class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-xs font-semibold"
+            >
+              MD
+            </div>
+            <div class="text-xs">
+              <p class="font-semibold text-white">Marc Dubois</p>
+              <p class="text-white/70">Réalisateur indépendant</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Avis 2 -->
+        <article
+          class="bg-white/5 border border-white/10 rounded-3xl px-6 py-7 flex flex-col justify-between"
+        >
+          <div class="mb-6">
+            <div class="flex items-center gap-1 text-yellow-300 text-sm mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span
+                >★</span
+              >
+            </div>
+
+            <p class="text-sm leading-relaxed text-white/90 italic">
+              "Après des années à utiliser d'autres marques, le RS4 Mini est une
+              révélation. Compact, intuitif, et les résultats sont d'une qualité
+              professionnelle. Parfait pour mes vlogs quotidiens."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-xs font-semibold"
+            >
+              SM
+            </div>
+            <div class="text-xs">
+              <p class="font-semibold text-white">Sophie Martin</p>
+              <p class="text-white/70">Créatrice de contenu</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Avis 3 -->
+        <article
+          class="bg-white/5 border border-white/10 rounded-3xl px-6 py-7 flex flex-col justify-between"
+        >
+          <div class="mb-6">
+            <div class="flex items-center gap-1 text-yellow-300 text-sm mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span
+                >★</span
+              >
+            </div>
+
+            <p class="text-sm leading-relaxed text-white/90 italic">
+              "Le RS3 offre le meilleur rapport qualité-prix du marché. Je
+              l'utilise pour tous mes mariages et événements corporate. Mes
+              clients sont toujours bluffés par la fluidité des vidéos."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-xs font-semibold"
+            >
+              LB
+            </div>
+            <div class="text-xs">
+              <p class="font-semibold text-white">Lucas Bernard</p>
+              <p class="text-white/70">Vidéaste événementiel</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Compatibilité -->
+      <div class="text-center mt-6">
+        <p class="text-[11px] uppercase tracking-[0.18em] text-white/70 mb-6">
+          Compatible avec vos équipements favoris
+        </p>
+
+        <div
+          class="flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm md:text-base text-white/80"
+        >
+          <span>Netflix</span>
+          <span>Sony</span>
+          <span>Canon</span>
+          <span>DJI</span>
+          <span>Adobe</span>
+          <span>RED</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</LandingLayout>

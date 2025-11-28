@@ -1,0 +1,242 @@
+---
+// src/layouts/LandingLayout.astro
+import heroBg from "../assets/container.webp";
+import "../styles/global.css";
+---
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Stabilix</title>
+    </head>
+    <body class="min-h-screen bg-slate-900 text-white">
+        <div
+            class="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-sky-900/70 to-indigo-900"
+        >
+            <!-- IMAGE EN FOND, ENTIEREMENT VISIBLE -->
+            <div
+                class="pointer-events-none absolute inset-0 flex items-center justify-center"
+            >
+                <img
+                    src={heroBg.src}
+                    alt="Stabilisateur Stabilix"
+                    class="max-h-[80vh] w-auto object-contain opacity-70"
+                />
+            </div>
+
+            <!-- CONTENU PAR-DESSUS -->
+            <div class="relative z-10">
+                <!-- HEADER -->
+                <header
+                    class="max-w-6xl mx-auto px-6 pt-6 flex items-center justify-between"
+                >
+                    <!-- Logo -->
+                    <a href="/" class="flex items-center gap-3">
+                        <div
+                            class="h-9 w-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center"
+                        >
+                            <span class="text-sm font-semibold tracking-tight"
+                                >S</span
+                            >
+                        </div>
+                        <span class="font-semibold tracking-tight"
+                            >Stabilix</span
+                        >
+                    </a>
+
+                    <!-- Navigation -->
+                    <nav class="hidden md:flex items-center gap-8 text-sm">
+                        <a
+                            href="#produits"
+                            class="hover:text-white/80 transition-colors"
+                        >
+                            Produits
+                        </a>
+                        <a
+                            href="#comparaison"
+                            class="hover:text-white/80 transition-colors"
+                        >
+                            Comparaison
+                        </a>
+                        <a
+                            href="#avis"
+                            class="hover:text-white/80 transition-colors"
+                        >
+                            Avis
+                        </a>
+                    </nav>
+
+                    <!-- Bouton header -->
+                    <a
+                        href="#commander"
+                        class="ml-4 rounded-full bg-white text-slate-900 text-sm font-medium px-5 py-2 shadow-lg shadow-black/20 hover:bg-slate-100 transition-colors"
+                    >
+                        Commander
+                    </a>
+                </header>
+
+                <!-- HERO -->
+                <main class="max-w-4xl mx-auto px-6 pt-28 pb-20 text-center">
+                    <!-- Badge -->
+                    <div
+                        class="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-1 text-xs font-medium mb-6 backdrop-blur"
+                    >
+                        <span class="h-2 w-2 rounded-full bg-emerald-400 mr-2"
+                        ></span>
+                        Nouvelle génération 2025
+                    </div>
+
+                    <!-- Titre principal -->
+                    <h1
+                        class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-4"
+                    >
+                        Dominez chaque prise de vue
+                    </h1>
+
+                    <!-- Sous-titre -->
+                    <p
+                        class="text-sm md:text-base text-white/80 leading-relaxed mb-10"
+                    >
+                        Découvrez la stabilité professionnelle avec Stabilix, la
+                        référence pour vidéastes et créateurs exigeants.
+                    </p>
+
+                    <!-- Boutons d'action -->
+                    <div
+                        class="flex flex-col sm:flex-row justify-center gap-4 mb-14"
+                    >
+                        <a
+                            href="#commander"
+                            class="rounded-full bg-white text-slate-900 text-sm font-medium px-7 py-3 shadow-lg shadow-black/30 hover:bg-slate-100 transition-colors"
+                        >
+                            Commander maintenant
+                        </a>
+                        <a
+                            href="#demo"
+                            class="rounded-full border border-white/40 bg-white/5 text-sm font-medium px-7 py-3 hover:bg-white/10 transition-colors"
+                        >
+                            Demander une démo
+                        </a>
+                    </div>
+
+                    <!-- Statistiques -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm">
+                        <div class="flex flex-col items-center gap-1">
+                            <span class="text-3xl font-semibold">98%</span>
+                            <span class="text-white/70"
+                                >Satisfaction clients</span
+                            >
+                        </div>
+                        <div class="flex flex-col items-center gap-1">
+                            <span class="text-3xl font-semibold">15h</span>
+                            <span class="text-white/70">Autonomie maximale</span
+                            >
+                        </div>
+                        <div class="flex flex-col items-center gap-1">
+                            <span class="text-3xl font-semibold">3 ans</span>
+                            <span class="text-white/70"
+                                >Garantie constructeur</span
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Indicateur scroll -->
+                    <div class="mt-16 flex justify-center">
+                        <div
+                            class="h-9 w-9 rounded-full border border-white/30 flex items-center justify-center animate-bounce"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Slot si tu veux ajouter du contenu plus bas -->
+                <slot />
+            </div>
+        </div>
+    </body>
+</html>
+<!-- FOOTER -->
+<footer class="bg-slate-950 text-white mt-20 py-14">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+        <!-- Colonne Logo -->
+        <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+                <div
+                    class="h-9 w-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center"
+                >
+                    <span class="text-sm font-semibold tracking-tight">S</span>
+                </div>
+                <span class="font-semibold tracking-tight">Stabilix</span>
+            </div>
+
+            <p class="text-sm text-white/60 leading-relaxed max-w-xs">
+                Stabilisez votre créativité avec des outils professionnels
+                pensés pour les vidéastes exigeants.
+            </p>
+        </div>
+
+        <!-- Colonne Produits -->
+        <div>
+            <h4 class="text-sm font-semibold mb-4">Produits</h4>
+            <ul class="space-y-2 text-white/70 text-sm">
+                <li>
+                    <a href="#produits" class="hover:text-white">Stabilix RS3</a
+                    >
+                </li>
+                <li>
+                    <a href="#produits" class="hover:text-white"
+                        >Stabilix RS4 Pro</a
+                    >
+                </li>
+                <li>
+                    <a href="#produits" class="hover:text-white"
+                        >Stabilix RS4 Mini</a
+                    >
+                </li>
+            </ul>
+        </div>
+
+        <!-- Colonne Société -->
+        <div>
+            <h4 class="text-sm font-semibold mb-4">À propos</h4>
+            <ul class="space-y-2 text-white/70 text-sm">
+                <li><a href="#" class="hover:text-white">Notre histoire</a></li>
+                <li><a href="#" class="hover:text-white">Support</a></li>
+                <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne Légal -->
+        <div>
+            <h4 class="text-sm font-semibold mb-4">Légal</h4>
+            <ul class="space-y-2 text-white/70 text-sm">
+                <li>
+                    <a href="#" class="hover:text-white">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-white"
+                        >Politique de confidentialité</a
+                    >
+                </li>
+                <li><a href="#" class="hover:text-white">Cookies</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bas de footer -->
+    <div class="mt-12 text-center text-xs text-white/60">
+        © 2025 Stabilix. Tous droits réservés.
+    </div>
+</footer>
